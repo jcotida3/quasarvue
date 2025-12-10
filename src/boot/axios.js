@@ -20,5 +20,4 @@ export default defineBoot(({ app }) => {
   // ^ ^ ^ this will allow you to use this.$api (for Vue Options API form)
   //       so you can easily perform requests against your app's API
 })
-Change nani warren
 export { api }

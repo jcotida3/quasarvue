@@ -1,69 +1,81 @@
+<script setup>
+
+</script>
+
 <template>
-  <q-page class="q-pa-md">
+  <q-page class="q-pa-lg">
+    <div class="row q-gutter-md full-height">
 
-    <!-- User Profile Card -->
-    <q-card class="my-card q-pa-md" flat bordered>
-      <q-card-section class="row items-center">
-        <q-avatar size="56px" class="q-mr-md">
-          <img src="https://cdn.quasar.dev/img/avatar.png">
-        </q-avatar>
-        <div>
-          <div class="text-h6">Jacky Brown Salve</div>
-          <div class="text-subtitle2">Student</div>
+      <div class="col-12 col-md-3 bg-white q-pa-md shadow-2" style="max-width: 280px; min-width: 250px;">
+        
+        <div class="q-mb-lg text-center">
+          <q-avatar size="64px" color="black" text-color="white" icon="person" />
         </div>
-      </q-card-section>
-      
-      <q-card-actions vertical>
-        <q-btn 
-          label="Profile Information"
-          color="primary" 
-          unelevated 
-          @click="showProfile = !showProfile"
-          icon="person"
-        />
-        <q-btn 
-          label="Student Information" 
-          color="secondary" 
-          unelevated
-          icon="school"
-        />
-      </q-card-actions>
-    </q-card>
 
-    <!-- Transitioned Profile Details -->
-    <q-slide-transition>
-      <q-card v-if="showProfile" class="q-mt-md q-pa-md" bordered>
-        <q-card-section>
-          <div class="text-h6">Personal Information</div>
+        <q-list separator>
+          <q-expansion-item group="nav"  label="Profile Information">
+            <q-item clickable>Item</q-item>
+            <q-item clickable>Item</q-item>
+            <q-item clickable>Item</q-item>
+          </q-expansion-item>
+          <q-expansion-item group="nav" label="Profile Information">
+            <q-item clickable>Item</q-item>
+            <q-item clickable>Item</q-item>
+            <q-item clickable>Item</q-item>
+          </q-expansion-item>
+          <q-expansion-item  group="nav" label="Profile Information">
+            <q-item clickable>Item</q-item>
+            <q-item clickable>Item</q-item>
+            <q-item clickable>Item</q-item>
+          </q-expansion-item>
+          
+        </q-list>
+        <q-list>
+          <q-expansion-item label="Test" clickable class="bg-yellow-1">
+            <q-item clickable>
+            <q-item-section class="bg-red-1">Test</q-item-section>
+            <q-item-section side><q-icon name="home"/></q-item-section>
+            </q-item>
+          </q-expansion-item>
+        </q-list>
+      </div>
 
-          <q-separator class="q-my-sm" />
+      <div class="col-12 col-md bg-white q-pa-md shadow-2">
+        <q-card flat class="q-pa-lg">
+          
+          <div class="row items-center q-mb-md">
+            <div class="text-h6 text-weight-medium">
+              Contact and Address Information
+            </div>
+            <q-icon name="edit" size="xs" color="blue" class="q-ml-sm cursor-pointer" />
+          </div>
+          
+          <div class="q-mb-lg">
+            <q-badge color="green-4" class="q-mr-sm">Primary</q-badge>
+            <span class="text-subtitle1 text-weight-regular">Address</span>
+            <div class="text-grey-7 q-mt-sm">-- No Active Primary Address Found --</div>
+          </div>
+          
+          <div>
+            <q-badge color="green-4" class="q-mr-sm">Primary</q-badge>
+            <span class="text-subtitle1 text-weight-regular">Contact</span>
+            <div class="text-grey-7 q-mt-sm">-- No Active Primary Contact Found --</div>
+          </div>
+          
+        </q-card>
+        <q-card class="bg-primary xs:full-width sm:w-1/2 md:w-1/3 lg:w-1/4">
+  
+</q-card>
 
-          <div><strong>Full Name:</strong> Jacky Brown Salve</div>
-          <div><strong>Email:</strong> oppaichan6969@gmail.com</div>
-          <div><strong>Civil Status:</strong> Single</div>
-          <div><strong>Date of Birth:</strong> May 26, 2002</div>
-          <div><strong>Sex Assigned at Birth:</strong> Female</div>
-        </q-card-section>
+      </div>
 
-        <q-card-actions align="right">
-          <q-btn flat round icon="add" color="primary"/>
-        </q-card-actions>
-      </q-card>
-    </q-slide-transition>
-
+    </div>
   </q-page>
 </template>
 
-<script setup>
-import { ref } from 'vue';
-
-const showProfile = ref(false);
-</script>
-
 <style scoped>
-.my-card {
-  max-width: 400px;
-  margin: auto;
-  border-radius: 16px;
+/* Ensure the page uses the full viewport height */
+.q-page {
+  min-height: calc(100vh - 50px); /* Adjust 50px for Quasar header/footer if they exist */
 }
 </style>

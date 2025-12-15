@@ -52,11 +52,15 @@
     <div class="text-h6 q-mb-md" style="color:#8B2233;">
       Schedule for Activities
     </div>
+    <q-separator 
+    color="primary"
+    size="1px"
+    class="q-my-md" />
 
     <!-- Activity Card 1 -->
-    <q-card flat bordered class="q-mb-md" style="background-color:#8B2233; color:white;">
+    <q-card flat bordered class="q-mb-md" style="background-color: white; color:black;">
       <q-card-section>
-        <div class="text-subtitle1 q-mb-sm">1st Semester SY 2025-2026 (1251)</div>
+        <div id="title" class=" bg-primary rounded-borders text-subtitle1 q-mb-sm">1st Semester SY 2025-2026 (1251)</div>
         <div class="text-caption">
           <strong>Undergraduate and other Graduate Programs:</strong><br>
           Classes begin August 11, 2025
@@ -65,15 +69,36 @@
     </q-card>
 
     <!-- Activity Card 2 -->
-    <q-card flat bordered class="q-mb-md" style="background-color:#8B2233; color:white;">
+    <q-card flat bordered class="q-mb-md" style="background-color:white; color:black;">
       <q-card-section>
-        <div class="text-subtitle1 q-mb-sm">1st Trimester SY 2025-2026 (1254)</div>
+        <div id="title" class="bg-primary rounded-borders text-subtitle1 q-mb-sm">1st Trimester SY 2025-2026 (1254)</div>
         <div class="text-caption">
-          <strong>MBA Program:</strong> Classes begin August 11, 2025<br>
-          <strong>Master of Education Program:</strong> Classes begin August 11, 2025
+          <strong>MBA Program:</strong><br> Classes begin August 11, 2025<br>
+          <strong>Master of Education Program:</strong><br> Classes begin August 11, 2025
         </div>
       </q-card-section>
     </q-card>
+
+    <!----Calendars---->
+    <div class="text-h6" style="color:#8B2233;">
+      Calendars
+    </div>
+    <q-separator 
+    color="primary"
+    size="1px"
+    class="q-my-md" />
+    <div class="q-gutter-md q-mt-sm">
+    <q-card flat bordered class="bg-primary rounded-borders text-subtitle1">
+      <div class="text-caption text-white q-py-sm">
+          2025-2026 UP Cebu Academic:<br>Calendar (Semestral for Undergraduate and Graduate Programs except MBA and MEd) <br>
+        </div> 
+    </q-card>
+    <q-card flat bordered class="bg-primary rounded-borders text-subtitle1">
+      <div class="text-caption text-white q-py-sm">
+          2025-2026 UP Cebu Academic:<br>Calendar (Semestral for Undergraduate and Graduate Programs except MBA and MEd) <br>
+        </div> 
+    </q-card>
+    </div>
   </div>
 </q-card>
     </div>
@@ -84,5 +109,15 @@
 <style scoped>
 .q-page {
   overflow-x: hidden;
+}
+#title {
+  border-radius: 15px;
+  padding-left: 10px;
+  color: white;
+}
+
+
+.text-caption {
+  padding-left: 10px;
 }
 </style>
